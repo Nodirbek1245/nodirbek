@@ -1,187 +1,417 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Figma</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<script>alert(" bu sayt ishonchli puling yechib olmaydi" )</script>
+<style>
+#ut{
+position: sticky;
+top: 0;
+left: 0;
+z-index: 1000;
+}
+@keyframes box-mover{
+0%{
+margin-right: 1000px;
+
+}
+100%{ margin-left: 100px;}
+}
+#demo{
+animation-name: box-mover;
+animation-duration: 4s;
+animation-fill-mode: both;
+animation-delay: unset;
+
+}
+@keyframes box-mover1{
+0%{
+margin-right: 1000px;
+
+}
+100%{ margin-left: 100px;}
+}
+#dem{
+animation-name: box-mover1;
+animation-duration: 4s;
+animation-fill-mode: both;
+animation-delay: unset;
+}
+@keyframes box-mover2{
+0%{
+margin-right: 1000px;
+
+}
+100%{ margin-left: 700px;}
+}
+#demo1{
+animation-name: box-mover2;
+animation-duration: 4s;
+animation-direction: alternate;
+animation-fill-mode: both;
+align-content: flex-end;
+
+}
+@keyframes box-mover3{
+0%{
+margin-right: 1000px;
+
+}
+100%{ margin-left: 150px;}
+}
+#we{
+animation-name: box-mover3;
+animation-duration: 4s;
+animation-fill-mode: both;
+animation-delay: unset;
+}
+.w{
+margin-left: 50px;
+margin-top: -50px;
+}
+.e{
+color: white;
+margin-top: -50px;
+}
+.q{
+color: white;
+margin-left: 50px;
+margin-top: -50px;
+}
+</style>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 </head>
-<style>/* Basic reset */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    /* Body and font settings */
-    body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        background-color: #f8f8f8;
-        color: #333;
-    }
-    
-    /* Header Styling */
-    header {
-        background-color: #1f1f1f;
-        color: white;
-        padding: 10px 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    header .logo img {
-        width: 100px;
-    }
-    
-    header nav ul {
-        list-style: none;
-        display: flex;
-        gap: 20px;
-    }
-    
-    header nav ul li a {
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-    }
-    
-    header nav ul li a.signup {
-        background-color: #ff8b00;
-        padding: 8px 20px;
-        border-radius: 5px;
-    }
-    
-    /* Hero Section Styling */
-    .hero {
-        background: #ff8b00;
-        color: white;
-        padding: 50px 20px;
-        text-align: center;
-    }
-    
-    .hero h1 {
-        font-size: 36px;
-        margin-bottom: 20px;
-    }
-    
-    .hero p {
-        font-size: 18px;
-        margin-bottom: 20px;
-    }
-    
-    .cta-btn {
-        text-decoration: none;
-        background-color: white;
-        color: #ff8b00;
-        padding: 10px 20px;
-        font-weight: bold;
-        border-radius: 5px;
-    }
-    
-    /* Features Section Styling */
-    .features {
-        display: flex;
-        justify-content: space-around;
-        padding: 40px 20px;
-        background-color: #fff;
-    }
-    
-    .feature {
-        text-align: center;
-        width: 30%;
-    }
-    
-    .feature img {
-        max-width: 100px;
-        margin-bottom: 20px;
-    }
-    
-    .feature h3 {
-        font-size: 22px;
-        margin-bottom: 10px;
-    }
-    
-    /* Footer Styling */
-    footer {
-        background-color: #1f1f1f;
-        color: white;
-        padding: 20px;
-        text-align: center;
-    }
-    
-    footer nav ul {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-    }
-    
-    footer nav ul li a {
-        text-decoration: none;
-        color: white;
-    }
-    
-    footer nav ul li a:hover {
-        text-decoration: underline;
-    }
-    </style>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo">
-            <img src="http://your-cdn-link.com/figma-logo.png" alt="Figma Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Community</a></li>
-                <li><a href="#">Log in</a></li>
-                <li><a href="#" class="signup">Sign up</a></li>
-            </ul>
-        </nav>
-    </header>
+<div id="ut">
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="leftMenu" >
+<button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+<a href="#" class="w3-bar-item w3-button">Link 1</a>
+<a href="#" class="w3-bar-item w3-button">Link 2</a>
+<a href="#" class="w3-bar-item w3-button">Link 3</a>
+</div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Design, prototype, and collaborate</h1>
-            <p>Create and test interactive prototypes with Figma. Collaborate in real-time with your team.</p>
-            <a href="#" class="cta-btn">Get Started</a>
-        </div>
-    </section>
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;" id="rightMenu">
+<button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+<input type="a">
+<a href="#" class="w3-bar-item w3-button">Link 2</a>
+<a href="#" class="w3-bar-item w3-button">Link 3</a>
+</div>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="feature">
-            <img src="http://your-cdn-link.com/feature-1.png" alt="Real-time Collaboration">
-            <h3>Real-time Collaboration</h3>
-            <p>Work with your team in real-time. Share designs and feedback instantly.</p>
-        </div>
-        <div class="feature">
-            <img src="http://your-cdn-link.com/feature-2.png" alt="Design Tools">
-            <h3>Powerful Design Tools</h3>
-            <p>Vector networks, prototyping, and layout tools to bring your designs to life.</p>
-        </div>
-        <div class="feature">
-            <img src="http://your-cdn-link.com/feature-3.png" alt="Version Control">
-            <h3>Version Control</h3>
-            <p>Keep track of changes and revert back to any version of your design.</p>
-        </div>
-    </section>
+<div class="w3-teal">
+<button class="w3-button w3-teal w3-xlarge w3-left" onclick="openLeftMenu()">&#9776;</button>
+<button class="w3-button w3-teal w3-xlarge w3-right" onclick="openRightMenu()">&#9776;</button>
+<div class="w3-container">
+<h1>
+Super sayt
+</h1>
+<center>
+<div class="bigbox" style="display: flex; margin-left:500px;">
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Figma. All rights reserved.</p>
-        <nav>
-            <ul>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-            </ul>
-        </nav>
-    </footer>
+<a href="https://dribbble.com/tags/web-design" class="e"><h1>Home</h1></a>
+
+<a href="https://dribbble.com/tags/actions" style="color: aliceblue;" class="w"><h1>Actions</h1></a>
+<a href="https://www.netlify.com/" class="q"><h1>Website </h1></a></div>
+
+</div>
+
+</center>
+</div>
+
+<div class="w3-container">
+
+</div>
+</div>
+<script>
+function openLeftMenu() {
+document.getElementById("leftMenu").style.display = "block";
+}
+
+function closeLeftMenu() {
+document.getElementById("leftMenu").style.display = "none";
+}
+
+function openRightMenu() {
+document.getElementById("rightMenu").style.display = "block";
+}
+
+function closeRightMenu() {
+document.getElementById("rightMenu").style.display = "none";
+}
+</script>
+
+<button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded="false">
+<span class="sr-only">Open main menu</span>
+<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+</svg>
+</button>
+</div>
+
+<ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+<li>
+<a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
+</li>
+<li>
+<a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+</li>
+<li>
+<a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+</li>
+<li>
+<a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</a>
+</li>
+<li>
+<a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+
+
+
+<div id="default-carousel" class="relative w-full" data-carousel="slide">
+<!-- Carousel wrapper -->
+<div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+<!-- Item 1 -->
+<div class="hidden duration-700 ease-in-out" data-carousel-item>
+<img src="https://designsvalley.com/wp-content/uploads/2023/10/what-is-web-design.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+</div>
+<!-- Item 2 -->
+<div class="hidden duration-700 ease-in-out" data-carousel-item>
+<img src="https://www.ntc.edu/sites/default/files/styles/full_width_16_9/public/2021-06/web-design-header.jpg?itok=4d7TmUMl" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+</div>
+<!-- Item 3 -->
+<div class="hidden duration-700 ease-in-out" data-carousel-item>
+<img src="https://www.webhopers.com/wp-content/uploads/2022/02/website-design-company-in-yamuna-nagar.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+</div>
+<!-- Item 4 -->
+<div class="hidden duration-700 ease-in-out" data-carousel-item>
+<img src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2022/01/104228210.jpg?auto=format&q=60&fit=max&w=930" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+</div>
+
+
+</div>
+
+<div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+<button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+<button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+<button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+<button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+<button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+</div>
+
+<button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+<span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+<svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+</svg>
+<span class="sr-only">Previous</span>
+</span>
+</button>
+<button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+<span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+<svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+</svg>
+<span class="sr-only">Next</span>
+</span>
+</button>
+</div>
+<center>
+<div class="bigbox" style="display: flex;" id="demo" >
+
+<a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700" style="margin-left: 150px;">
+<img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtQdW7u196FnHVpMNRAHTEb6aXJwLIetA6SmZzZr7fUgmB3738kWk6ACBPk40JwPeMI5U&usqp=CAU md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700" alt="">
+<div class="flex flex-col justify-between p-4 leading-normal">
+<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+</div>
+</a>
+
+
+<a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700" style="margin-left: 160px;" id="we">
+<img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="https://d1ng1bucl7w66k.cloudfront.net/ghost-blog/2021/10/Screen-Shot-2021-10-26-at-4.12.49-PM.png" alt="">
+<div class="flex flex-col justify-between p-4 leading-normal">
+<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+</div>
+</a>
+
+
+
+
+</div>
+</center>
+<br>
+<center>
+<div class="bigbox" style="display: flex;" id="dem">
+
+<a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700" style="margin-left: 150px;">
+<img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtQdW7u196FnHVpMNRAHTEb6aXJwLIetA6SmZzZr7fUgmB3738kWk6ACBPk40JwPeMI5U&usqp=CAU md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700" alt="">
+<div class="flex flex-col justify-between p-4 leading-normal">
+<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+</div>
+</a>
+
+<a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700" style="margin-left: 160px;">
+<img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="https://d1ng1bucl7w66k.cloudfront.net/ghost-blog/2021/10/Screen-Shot-2021-10-26-at-4.12.49-PM.png" alt="">
+<div class="flex flex-col justify-between p-4 leading-normal">
+<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+</div>
+</a>
+</center>
+</div>
+
+<div class="w-full max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700" style="width: 1000px;" id="demo1">
+<div class="flex items-center justify-between mb-4">
+<h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Our team</h5>
+<a href="#" class="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
+View all
+</a>
+</div>
+<br>
+<br>
+<div style="margin-right: 200px; margin-top: -50px;">
+<div class="flow-root">
+<ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
+<li class="py-3 sm:py-4">
+<div class="flex items-center">
+<div class="flex-shrink-0">
+<img class="w-8 h-8 rounded-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-oVhqyl1WEyNh_5rj7cE61g5W31bGNGAwlg&s" alt="Neil image">
+</div>
+<div class="flex-1 min-w-0 ms-4">
+<p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+Q.Baxtiyor
+</p>
+<p class="text-sm text-gray-500 truncate dark:text-gray-400">
+sensorika@gmail.com
+</p>
+</div>
+<div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+
+</div>
+</div>
+</li>
+<li class="py-3 sm:py-4">
+<div class="flex items-center ">
+<div class="flex-shrink-0">
+<img class="w-8 h-8 rounded-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVdvqGngUkyCDV2ZwKklF6km-HYsKSfmwj8g&s" alt="Bonnie image">
+</div>
+<div class="flex-1 min-w-0 ms-4">
+<p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+R.Nodirbek
+</p>
+<p class="text-sm text-gray-500 truncate dark:text-gray-400">
+radjabovnodirbek708@gmail.com
+</p>
+</div>
+<div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+
+</div>
+</div>
+</li>
+<li class="py-3 sm:py-4">
+<div class="flex items-center">
+<div class="flex-shrink-0">
+<img class="w-8 h-8 rounded-full" src="https://img.pixers.pics/pho_wat(s3:700/FO/38/21/09/85/700_FO38210985_76f532408a9bb431aed242a945e56cc9.jpg,700,700,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,650,jpg)/wall-murals-fire-alphabet-letter-f.jpg.jpg" alt="Michael image">
+</div>
+<div class="flex-1 min-w-0 ms-4">
+<p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+I.Farhod
+</p>
+<p class="text-sm text-gray-500 truncate dark:text-gray-400">
+email@windster.com
+</p>
+</div>
+<div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+
+</div>
+</div>
+</li>
+<li class="py-3 sm:py-4">
+<div class="flex items-center ">
+<div class="flex-shrink-0">
+<img class="w-8 h-8 rounded-full" src="https://static8.depositphotos.com/1020618/852/i/950/depositphotos_8526465-stock-photo-fire-alphabet-letter-m.jpg" alt="Lana image">
+</div>
+<div class="flex-1 min-w-0 ms-4">
+<p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+A.Muhammadali
+</p>
+<p class="text-sm text-gray-500 truncate dark:text-gray-400">
+email@windster.com
+</p>
+</div>
+<div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+
+</div>
+</div>
+</li>
+<li class="pt-3 pb-0 sm:pt-4">
+<div class="flex items-center ">
+<div class="flex-shrink-0">
+<img class="w-8 h-8 rounded-full" src="https://img.pixers.pics/pho_wat(s3:700/FO/57/40/61/03/700_FO57406103_f13f48a1d2dd603a6e0b36d0e8a6a205.jpg,700,700,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,650,jpg)/papiers-peints-lettre-de-l-39-alphabet-d-39-incendie-a.jpg.jpg" alt="Thomas image">
+</div>
+<div class="flex-1 min-w-0 ms-4">
+<p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+Y.Asilbek
+</p>
+<p class="text-sm text-gray-500 truncate dark:text-gray-400">
+email@windster.com
+</p>
+</div>
+
+
+<div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+<footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+<div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+<div class="sm:flex sm:items-center sm:justify-between">
+<a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+<img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/f1510c33144541.56a13c4f113ca.jpg" height="" class="h-8" alt="Flowbite Logo" />
+<span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+</a>
+<ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+<li>
+<a href="#" class="hover:underline me-4 md:me-6">About</a>
+</li>
+<li>
+<a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+</li>
+<li>
+<a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+</li>
+<li>
+<a href="#" class="hover:underline">Contact</a>
+</li>
+</ul>
+</div>
+<hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+<span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
+</div>
+</footer>
+
+
 </body>
-</html>
