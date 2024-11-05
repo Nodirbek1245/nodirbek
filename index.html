@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Figma</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>/* Basic reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* Body and font settings */
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f8f8f8;
+        color: #333;
+    }
+    
+    /* Header Styling */
+    header {
+        background-color: #1f1f1f;
+        color: white;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    header .logo img {
+        width: 100px;
+    }
+    
+    header nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+    
+    header nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+    
+    header nav ul li a.signup {
+        background-color: #ff8b00;
+        padding: 8px 20px;
+        border-radius: 5px;
+    }
+    
+    /* Hero Section Styling */
+    .hero {
+        background: #ff8b00;
+        color: white;
+        padding: 50px 20px;
+        text-align: center;
+    }
+    
+    .hero h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    
+    .hero p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    
+    .cta-btn {
+        text-decoration: none;
+        background-color: white;
+        color: #ff8b00;
+        padding: 10px 20px;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+    
+    /* Features Section Styling */
+    .features {
+        display: flex;
+        justify-content: space-around;
+        padding: 40px 20px;
+        background-color: #fff;
+    }
+    
+    .feature {
+        text-align: center;
+        width: 30%;
+    }
+    
+    .feature img {
+        max-width: 100px;
+        margin-bottom: 20px;
+    }
+    
+    .feature h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    
+    /* Footer Styling */
+    footer {
+        background-color: #1f1f1f;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    footer nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    footer nav ul li a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    footer nav ul li a:hover {
+        text-decoration: underline;
+    }
+    </style>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="http://your-cdn-link.com/figma-logo.png" alt="Figma Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Log in</a></li>
+                <li><a href="#" class="signup">Sign up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Design, prototype, and collaborate</h1>
+            <p>Create and test interactive prototypes with Figma. Collaborate in real-time with your team.</p>
+            <a href="#" class="cta-btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature">
+            <img src="http://your-cdn-link.com/feature-1.png" alt="Real-time Collaboration">
+            <h3>Real-time Collaboration</h3>
+            <p>Work with your team in real-time. Share designs and feedback instantly.</p>
+        </div>
+        <div class="feature">
+            <img src="http://your-cdn-link.com/feature-2.png" alt="Design Tools">
+            <h3>Powerful Design Tools</h3>
+            <p>Vector networks, prototyping, and layout tools to bring your designs to life.</p>
+        </div>
+        <div class="feature">
+            <img src="http://your-cdn-link.com/feature-3.png" alt="Version Control">
+            <h3>Version Control</h3>
+            <p>Keep track of changes and revert back to any version of your design.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Figma. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
